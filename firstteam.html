@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First team</title>
+    <link rel="shortcut icon" href="./img/logo chel.png" />
+    <link rel="stylesheet" href="./assest/style.css">
+    <link rel="stylesheet" href="./assest/style.css">
+    <link rel="stylesheet" href="./assest/slider.css">
+    <link rel="stylesheet" href="./assest/legend.css">
+    <link rel="stylesheet" href="./assest/news.css">
+    <link rel="stylesheet" href="./assest/taitro.css">
+    <link rel="stylesheet" href="./assest/base.css">
+    <link rel="stylesheet" href="./assest/footer.css">
+    <link rel="stylesheet" href="./assest/grid.css">
+    <link rel="stylesheet" href="./assest/responsive.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+     <link href="./assest/font/fontawesome-free-6.1.2-web/css/all.css">
+     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
+  <style>
+    :root {
+  --canvas-color: #ffffff;
+  --hover-color: #e7e7e8;
+}
+.darkmode {
+  --canvas-color: #15202B;
+  --hover-color: #22303C;
+}
+body {
+  background-color: var(--canvas-color);
+}
+#dark-mode-toggle {
+    display: none;
+}
+.dark-mode-toggle {
+    display: inline-block;
+    cursor: pointer;
+    padding: .5rem;
+}
+.dark-mode-toggle:hover, .dark-mode-toggle:focus {
+  background-color: var(--hover-color);
+  border-radius: 16px;
+}
+.dark-mode-toggle::after {
+    content: '🌚';
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-content: center;
+    line-height: 0;
+    transition: background-color 1s,
+    transform 1s ease-in;
+}
+#dark-mode-toggle:checked+.dark-mode-toggle::after {
+    content: '🌞';
+    transform: translateX(0px) rotate(360deg);
+}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-topbar hide-on-mb">
+
+        <div class="grid wide header-topbar-container" style="display:flex;">
+
+
+            <div class="header-topbar__contact">
+             
+           
+              <img width="120px" src="./img/Nike_Swoosh_Black.webp">
+              <img  width="120px" style="color:white;" src="./img/Three_Black.webp">
+              <img  width="120px" src="./img/Trivago_Coloured.webp">
+              <img  width="120px" src="./img/Whalefin_Colour_Black.webp">
+              
+            </div>
+          
+           
+
+            <input type="checkbox" id="dark-mode-toggle">
+            <label for="dark-mode-toggle" class="dark-mode-toggle"></label>
+            <script>    // check for saved 'darkMode' in localStorage
+              let darkMode = localStorage.getItem('darkMode'); 
+              
+              const darkModeToggle = document.querySelector('#dark-mode-toggle');
+              
+              const enableDarkMode = () => {
+                // 1. Add the class to the body
+                document.body.classList.add('darkmode');
+                // 2. Update darkMode in localStorage
+                localStorage.setItem('darkMode', 'enabled');
+              }
+              
+              const disableDarkMode = () => {
+                // 1. Remove the class from the body
+                document.body.classList.remove('darkmode');
+                // 2. Update darkMode in localStorage 
+                localStorage.setItem('darkMode', null);
+              }
+               
+              // If the user already visited and enabled darkMode
+              // start things off with it on
+              if (darkMode === 'enabled') {
+                enableDarkMode();
+              }
+              
+              // When someone clicks the button
+              darkModeToggle.addEventListener('click', () => {
+              
+                // get their darkMode setting
+                darkMode = localStorage.getItem('darkMode'); 
+                
+                // if it not current enabled, enable it
+                if (darkMode !== 'enabled') {
+                  enableDarkMode();
+                // if it has been enabled, turn it off  
+                } else {  
+                  disableDarkMode(); 
+                }
+              });</script>
+       
+
+            <div class="header-topbar__login">
+                <ul style="margin-top:10px ;">
+                    <li><a style="font-size:10px ;" href="./login.html">Đăng Nhập</a></li>
+                    <li><a href="./register.html">Đăng Kí</a></li>
+                  
+                </ul>
+               
+
+            </div>
+        </div>
+    </div>
+    
+
+
+    
+    
+    <div class="header-nav">
+      
+        <div class="grid wide">
+            <div class="row">
+              
+                <div class="header-nav-container">
+                    <div class="col l-3 m-6 c-6">
+                        <a href="./index.html" class="header-nav__logo">
+                            <img width="300px"src="./img/logo chel.png" alt=""> CHELSEA
+                        </a>
+                    </div>
+                    <div class="col l-6 m-0 c-0">
+                        <div class="header-nav__list">
+                            <ul>
+                                <li class="header-nav__item header-nav__item--active"><a href="">Trang chủ</a></li>
+                                <li class="header-nav__item"><a href="./firstteam.html">Đội 1</a></li>
+                                <li class="header-nav__item"><a href="">Huyền Thoại</a></li>
+                                <li class="header-nav__item"><a href="./lich.html">Lịch Thi Đấu</a></li>
+                                <li class="header-nav__item"><a href="./stadium.html">Sân Vận Động</a></li>
+                                <li class="header-nav__item"><a href="">Tin tức</a></li>
+                                <li class="header-nav__item"><a href="">contact</a></li>
+                                <li class="header-nav__item"><a href="./store.html">cửa hàng</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col l-3 m-6 c-6">
+                        <div class="header-nav__control-mb">
+                            <div class="header-nav__search ">
+                                <i class="header-nav__search-icon fas fa-search"></i>
+                                <input type="text" class="header-nav__search-input" placeholder="Tìm kiếm...">
+                            </div>
+                            <label for="header-mb-bars__checkbox" class="header-mb-bars__label hide-on-pc-tb">
+                                <i class="list-tablet-mobile fas fa-bars"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+
+</header>
+
+<div class="team" >
+  <main id="first-team">
+  <div class="roler">
+      First team
+  </div>
+  
+  
+  <div class="team-position">
+      <div class="position-names">Goalkeepers</div>
+      <div class="sub-position">
+        <a href="./mendy.html">
+          <div class="position-btn">
+            <img src="./img/2021_FIFA_Club_World_Cup_Final_-_30.jpg" alt="" class="position-img">
+            <div class="position-info">  
+              <div class="position-number">16</div>
+              <div class="position-name" style="color:red;">Édouard_Mendy</div>
+            </div>
+          </div>
+        </a>
+       
+      </div>
+    </div>
+    
+    
+    
+    <div class="team-position">
+      <div class="position-names">Defenders</div>
+      <div class="sub-position defend">
+        <a href="./chalobah.html">
+          <div class="position-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/TrevohChalobahIpsBlR1.jpg/330px-TrevohChalobahIpsBlR1.jpg" alt="" class="position-img">
+            <div class="position-info">  
+              <div class="position-number">14</div>
+              <div class="position-name" style="color:red;">Trevoh Chalobah</div>
+            </div>
+          </div>
+        </a>
+      
+
+        
+
+        
+        <a href="./silva.html">
+          <div class="position-btn">
+            <img src="./img/Thiago_Silva_with_Club_World_Cup_Trophy_2022.jpg" alt="" class="position-img">
+            <div class="position-info">  
+              <div class="position-number">6</div>
+              <div class="position-name" style="color:red;">Thiago Silva</div>
+            </div>
+          </div>
+        </a>
+      
+      <a href="./kouli.html">
+        <div class="position-btn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Kalidou_Koulibaly_%28cropped%29.jpg/255px-Kalidou_Koulibaly_%28cropped%29.jpg" alt="" class="position-img">
+          <div class="position-info">  
+            <div class="position-number">26</div>
+            <div class="position-name" style="color:red;">Kalidou Koulibaly</div>
+          </div>
+        </div>
+      </div>
+      </a>
+
+    
+
+      
+    </div>
+   
+   
+    <div class="team-position">
+      <div class="position-names ">MIDFIELDERS</div>
+      <div class="sub-position middle">
+        
+        <a href="./james.html">
+          <div class="position-btn">
+            <img src="./img/r.jame.jpg" alt="" class="position-img">
+            <div class="position-info">  
+              <div class="position-number">24</div>
+              <div class="position-name " style="color:red;">Reece James</div>
+            </div>
+          </div>
+        </a>
+        
+
+        <a href="./kante.html">
+          <div class="position-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Ngolo_Kante_2017.jpg/255px-Ngolo_Kante_2017.jpg" alt="" class="position-img">
+            <div class="position-info">  
+              <div class="position-number">7</div>
+              <div class="position-name" style="color:red;">N'Golo Kanté</div>
+            </div>
+          </div>
+        </a>
+        
+
+    
+
+        <a href="./jorginho.html">
+          <div class="position-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Jorginho_2020.jpg" alt="" class="position-img">
+            <div class="position-info">  
+              <div class="position-number">5</div>
+              <div class="position-name" style="color:red;">Jorginho</div>
+            </div>
+          </div>
+        </a>
+        
+        <a href="./kovacic.html">
+          <div class="position-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Ben_Chilwell_2020.jpg/330px-Ben_Chilwell_2020.jpg" alt="" class="position-img">
+            <div class="position-info">  
+              <div class="position-number">21</div>
+              <div class="position-name" style="color:red;">Ben Chilwell</div>
+            </div>
+          </div>
+        </a>
+
+      
+      
+      
+      </div>
+    </div>
+    
+    
+    <div class="team-position">
+      <div class="position-names">forwards</div>
+      <div class="sub-position">
+        
+        <a href="./sterling.html">
+          <div class="position-btn">
+            <img src="./img/sterling.webp" alt="" class="position-img">
+            <div class="position-info">  
+              <div class="position-number">17</div>
+              <div class="position-name" style="color:red;">Raheem Sterling</div>
+            </div>
+          </div>
+        </a>
+        
+        <a href="./havert.html">
+          <div class="position-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Kai_Havertz_2020.jpg/255px-Kai_Havertz_2020.jpg" alt="" class="position-img">
+            <div class="position-info">  
+              <div class="position-number">29</div>
+              <div class="position-name" style="color:red;">	Kai Havertz</div>
+            </div>
+          </div>
+        </a>
+      
+        <a href="./mount.html">
+          <div class="position-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Mountbrightonoct3_2019_%28cropped%29.jpg/330px-Mountbrightonoct3_2019_%28cropped%29.jpg" alt="" class="position-img">
+            <div class="position-info">  
+              <div class="position-number">19</div>
+              <div class="position-name" style="color:red;">Mason Mount</div>
+            </div>
+          </div>
+        </a>
+         <script>
+      $ = document.querySelector.bind(document)
+$$ = document.querySelectorAll.bind(document)
+
+// Header sticky
+const headerTop = $('.header-topbar-container')
+const headerNav = $('.header-nav')
+
+window.addEventListener('scroll', scrollFunction)
+
+function scrollFunction() {
+    if(document.documentElement.scrollTop >= 20 || document.body.scrollTop >= 20) {
+        headerTop.classList.add('hide')
+        headerNav.classList.add('scroll')
+    } else {
+        headerTop.classList.remove('hide')
+        headerNav.classList.remove('scroll')
+    }
+}
+
+// Search btn
+const btnSearch = $('.header-nav__search-icon')
+const inputSearch = $('.header-nav__search-input')
+btnSearch.addEventListener('click', () => {
+    inputSearch.classList.toggle('open')
+})
+
+// link active
+
+
+
+// searchHeader active
+const searchHeaders = $$('.search-header__item')
+
+searchHeaders.forEach(searchHeader => {
+    searchHeader.addEventListener('click', (e) => {
+        e.preventDefault();
+        $('.search-header__item--active').classList.remove('search-header__item--active');
+        searchHeader.classList.add('search-header__item--active');
+    })
+});
+
+
+
+// searchHeaderTlMb active
+const searchHeadersTlMb = $$('.search-header-tb-mb__item-link')
+
+searchHeadersTlMb.forEach(searchHeaderTlMb => {
+    searchHeaderTlMb.addEventListener('click', (e) => {
+        e.preventDefault();
+        $('.search-header-tb-mb__item-link--active').classList.remove('search-header-tb-mb__item-link--active');
+        searchHeaderTlMb.classList.add('search-header-tb-mb__item-link--active');
+    })
+});
+
+
+
+
+
+
+
+
+
+    </script>
+      
+      
+      </div>
+    </div>
+    </main>
+</div>
+</body>
+</html>

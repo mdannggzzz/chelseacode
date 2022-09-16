@@ -1,0 +1,2507 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo chel.png" />
+    <link rel="stylesheet" href="./assest/style.css">
+    <link rel="stylesheet" href="./assest/slider.css">
+    <link rel="stylesheet" href="./assest/legend.css">
+    <link rel="stylesheet" href="./assest/news.css">
+    <link rel="stylesheet" href="./assest/taitro.css">
+    <link rel="stylesheet" href="./assest/base.css">
+    <link rel="stylesheet" href="./assest/footer.css">
+    <link rel="stylesheet" href="./assest/grid.css">
+    <link rel="stylesheet" href="./assest/respon.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assest/responsive.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+     <link href="./assest/font/fontawesome-free-6.1.2-web/css/all.css">
+     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
+    <title>Home</title>
+<style>
+  .theme-toggle {
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: var(--secondary);
+  transition: background 0.3s;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fff;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  height: 100vh;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.left-slide {
+  height: 100%;
+  width: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.left-slide > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.left-slide h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: -30px;
+}
+
+.right-slide {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 65%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.right-slide > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 15px;
+}
+
+button:hover {
+  color: #222;
+}
+
+button:focus {
+  outline: none;
+}
+
+.slider-container .action-buttons button {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 100;
+}
+
+.slider-container .action-buttons .down-button {
+  transform: translateX(-100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.slider-container .action-buttons .up-button {
+  transform: translateY(-100%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.translate3d{
+  transform: translate3d(1px, 1px, 1);
+  transition: transform 0.5s ease;  
+}
+
+.box:hover .translate3d{
+  transform: translate3d(1px, 1px, 50px) rotate3d(3, 2, 2, 90deg);
+ /* Standard syntax */
+}
+
+.h1{
+  font-size:30px;
+  font-weight: 500;
+  color: #222;
+  letter-spacing: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.h1:hover{
+  color: #fff;
+  text-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
+}
+
+.h2{
+  font-size: 30px;
+  font-weight: 500;
+  color: royalblue;
+  letter-spacing: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.h2:hover{
+  color: #fff;
+  text-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
+}
+
+/* firsteam text on img css*/
+.example {
+  position: relative;
+  }
+
+.example p {
+  
+  font-family: Oswald;
+  position: absolute;
+  font-weight: bold;
+  font-size: 5em;
+  top: 50%;
+  left: 50%;
+  font-family :Quicksand, sans-serif;
+   animation: Color 4s linear infinite;
+  -webkit-animation: Color 4s ease-in-out infinite;
+
+  }
+
+  @keyframes Color{
+  0%{
+    color:#A0D468;
+  }
+  
+  20%{
+    color:#4FC1E9;
+  }
+  
+  40%{
+    color:#FFCE54;
+  }
+  
+  60%{
+    color:#FC6E51;
+  }
+  
+  80%{
+    color:#ED5565;
+  }
+  
+  100%{
+    color:#AC92EC;
+  }
+}
+
+@-moz-keyframes Color{
+  0%{
+    color:#A0D468;
+  }
+  
+  20%{
+    color:#4FC1E9;
+  }
+  
+  40%{
+    color:#FFCE54;
+  }
+  
+  60%{
+    color:#FC6E51;
+  }
+  
+  80%{
+    color:#ED5565;
+  }
+  
+  100%{
+    color:#AC92EC;
+  }
+}
+
+@-webkit-keyframes Color{
+  0%{
+    color:#A0D468;
+  }
+  
+  20%{
+    color:#4FC1E9;
+  }
+  
+  40%{
+    color:#FFCE54;
+  }
+  
+  60%{
+    color:#FC6E51;
+  }
+  
+  80%{
+    color:#ED5565;
+  }
+  
+  100%{
+    color:#AC92EC;
+  }
+}
+
+
+.example img {
+  width: 100%;
+  }
+
+
+  /* css tin tức */
+ /* Font */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+/* Design */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #ecf9ff;
+}
+
+body {
+  color: #272727;
+  font-family: 'Quicksand', serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  
+}
+
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+  background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+}
+
+.card_title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}
+.made_by{
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 35px;
+  text-align: center;
+}
+
+/* css chatbox */
+#center-text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* ----------- CHATBOT STYLE--------- */
+.chat-circle_robot {
+/*     margin-left: -7%; */
+    display: block;
+    margin-left: 1px;
+}
+.chat-box-overlay_robot {
+    margin-left: -3px; 
+}
+.chat-box-welcome_robot {
+    margin-left: -10px;
+}
+
+/* ---------- GENERAL STYLE---------- */
+
+.chat-box-welcome__company-name,
+.chat-box__sign {
+    font-family: 'Roboto', 'Helvetica Neue', "Arial", sans-serif;
+    position: relative;
+}
+
+
+/*powered by deeppixel*/
+
+.chat-box__sign {
+    font-size: 9px;
+    line-height: 20px;
+    /*color: #a2a2a2;*/
+    color: #b5b5b5;
+}
+
+.chat-input-box {
+    text-align: center;
+    position: relative;
+}
+
+.btn#my-btn {
+    background: white;
+    padding-top: 13px;
+    padding-bottom: 12px;
+    border-radius: 45px;
+    padding-right: 40px;
+    padding-left: 40px;
+    color: #5865C3;
+}
+
+
+/*color to change*/
+
+#chat-circle,
+.chat-box-welcome__header,
+.chat-box-header,
+.chat-msg.bot>.msg-avatar {
+    /*red*/
+    /*background-image: linear-gradient( to top right, rgba(246, 72, 72, 1), rgba(250, 65, 95, 1));*/
+    /*pink-blue*/
+    /*background-image: linear-gradient( to top left, rgba(252, 123, 123, 1), rgba(166, 193, 255, 1));*/
+    /*pink-red*/
+    background-image: linear-gradient( to bottom right, rgba(168,	224,	99, 1), rgba(246, 72, 72, 1));
+}
+
+.options-btn {
+    border: 1px solid rgba(246, 72, 72, 1);
+}
+.spiner > *  {
+    background: rgba(246, 72, 72, 1);
+}
+
+/*.options-btn:hover{
+   background-image: linear-gradient( to bottom right, rgba(240, 149, 255, 1), rgba(246, 72, 72, 1));
+    
+    color: white;
+}*/
+
+/* ---------- chat-bot-button to open chat---------- */
+
+#chat-circle {
+    position: fixed;
+    bottom: 50px;
+    /*right: 50px;*/
+    right: 50px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    /*box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.6), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);*/
+    box-shadow: 0px 3px 16px 0px rgba(246, 72, 72, 0.5), 0 3px 1px -2px rgba(246, 72, 72, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    /*remove display none*/
+    /*display: none;*/
+}
+
+
+/*#chat-circle .material-icons {
+    font-size: 36px;
+}*/
+
+#chat-overlay {
+    background: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: none;
+}
+
+.chat-circle_robot {
+    height: 50px;
+}
+
+
+/*chat-bot-welcome*/
+
+.chat-box-welcome {
+    /*add display none*/
+    /* display: none;*/
+    /*background: #efefef;*/
+    background: #f8f8f8;
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    width: 350px;
+    max-width: 85vw;
+    max-height: 100vh;
+    border-radius: 3px;
+    /*   box-shadow: 0px 5px 35px 9px #464a92; */
+    box-shadow: 0px 5px 35px 9px #ccc;
+}
+
+
+.chat-box-welcome__header {
+    height: 420px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    display: none;
+}
+
+.chat-box__header-text {
+    color: white;
+    padding-left: 10px;
+    font-size: 20px;
+    padding-top: 13px;
+}
+
+#chat-box-welcome__ava {
+    background: rgba(0, 0, 0, 0.38);
+    border-radius: 50%;
+    position: absolute;
+    top: 98px;
+    left: 124px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    color: white;
+    padding: 22px;
+}
+
+
+/*#chat-box-welcome__ava .material-icons {
+    font-size: 64px;
+}*/
+
+.chat-box-welcome_robot {
+    height: 75px;
+    position: absolute;
+    top: 12px;
+}
+
+.chat-box-welcome__welcome-text {
+    color: #fff;
+    text-align: center;
+    width: 80%;
+    position: relative;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.chat-box-welcome__welcome-text p {
+    font-size: 24px;
+}
+
+
+/*chat-box after welcome was togled*/
+
+#chat-box__wraper {
+    display: none;
+}
+
+.chat-box {
+    /*add display none*/
+    display: none;
+    /*background: #efefef;*/
+    background: #f8f8f8;
+    position: fixed;
+    /* right: 30px;*/
+    right: 30px;
+    bottom: 50px;
+    width: 350px;
+    max-width: 85vw;
+    max-height: 100vh;
+    border-radius: 3px;
+    /*   box-shadow: 0px 5px 35px 9px #464a92; */
+    box-shadow: 0px 5px 35px 9px #ccc;
+}
+
+.chat-box-toggle {
+    float: right;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.chat-box-header {
+    position: relative;
+    height: 50px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: white;
+    padding-left: 10px;
+    font-size: 20px;
+    padding-top: 13px;
+}
+
+.chat-box-body {
+    position: relative;
+    height: 370px;
+    height: auto;
+    border-bottom: 1px solid rgba(181, 181, 181, 0.42);
+    overflow: hidden;
+}
+
+.chat-box-body:after {
+    content: "";
+    background-color: #F8F8F8;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.chat-input__text {
+    background: #fff;
+    width: 95%;
+    position: relative;
+    height: 47px;
+    padding-top: 10px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    margin-top: 5px;
+    resize: none;
+    outline: none;
+    border: 1px solid #F2F0F0;
+    color: #888;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.chat-input-box>form {
+    margin-bottom: 0;
+}
+
+.chat-input__text::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #ccc;
+}
+
+.chat-input__text::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #ccc;
+}
+
+.chat-input__text:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #ccc;
+}
+
+.chat-input__text:-moz-placeholder {
+    /* Firefox 18- */
+    color: #ccc;
+}
+
+.chat-submit {
+    position: absolute;
+    bottom: 27px;
+    right: 10px;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    border-radius: 50%;
+    color: rgba(250, 65, 95, 0.99);
+    width: 35px;
+    height: 35px;
+}
+
+.chat-logs {
+    padding: 15px;
+    height: 370px;
+    overflow-y: scroll;
+}
+
+@media only screen and (max-width: 500px) {
+    .chat-logs {
+        height: 40vh;
+    }
+}
+
+.chat-msg.bot>.msg-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    float: left;
+    width: 15%;
+    padding: 9px;
+    position: relative;
+}
+
+
+/*.chat-msg.bot>.msg-avatar .material-icons {
+    color: #fff;
+    font-size: 25px;
+}*/
+
+.chat-box-overlay_robot {
+    height: 35px;
+    position: absolute;
+    top: 5px;
+}
+
+
+/*.chat-msg.self>.msg-avatar img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    float: right;
+    width: 15%;
+}*/
+
+.cm-msg-text {
+    background: white;
+    padding: 10px 15px 10px 15px;
+    color: #666;
+    max-width: 75%;
+    float: left;
+    margin-left: 10px;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+
+.options-btn {
+    background: white;
+    padding: 10px 15px 10px 15px;
+    color: #666;
+    width: 75%;
+    margin-left: 55px;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+
+.chat-msg {
+    clear: both;
+}
+
+.chat-msg.self>.cm-msg-text {
+    float: right;
+    background: #efefef;
+    /*color: white;*/
+}
+
+.cm-msg-button>ul>li {
+    list-style: none;
+    float: left;
+    width: 50%;
+}
+
+.cm-msg-button {
+    clear: both;
+    margin-bottom: 70px;
+}
+
+
+/*loader*/
+
+
+.spin-container {
+       /* padding: 0px 15px 0px 15px; */
+    color: #666;
+    max-width: 75%;
+    /* float: left; */
+    bottom: 4px;
+    left: 50%;
+    /* margin-left: 45%; */
+    position: absolute;
+    /* margin-bottom: 20px; */
+    display: none;
+}
+
+.spiner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -10px 0 0 -20px;
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  width: 40px;
+}
+.spiner > * {
+  position: absolute;
+  top: 5px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+ /* background: #0074e4;*/
+  opacity: 0.6;
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+}
+.spiner > *:nth-child(1) {
+  left: 0;
+  -webkit-animation: mymove 1.3s infinite ease-in;
+  animation: mymove 1.3s infinite ease-in;
+}
+.spiner > *:nth-child(2) {
+  left: 12px;
+  -webkit-animation: mymove 1.3s 0.3s infinite ease-in;
+  animation: mymove 1.3s 0.3s infinite ease-in;
+}
+.spiner > *:nth-child(3) {
+  left: 24px;
+  -webkit-animation: mymove 1.3s 0.6s infinite ease-in;
+  animation: mymove 1.3s 0.6s infinite ease-in;
+}
+
+@-webkit-keyframes mymove {
+  0%,
+  100%,
+  80% {
+    opacity: 0.6;
+    -webkit-transform: scale(0.4);
+  }
+  40% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes mymove {
+  0%,
+  100%,
+  80% {
+    opacity: 0.6;
+    transform: scale(0.4);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* dark mode css */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
+:root{
+  --primary-color: #000;
+  --secondary-color: #fff;
+}
+
+
+
+
+.toggle {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 0;
+  border-radius: 4px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 100px;
+  cursor: pointer;
+}
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: #f0f0f0;
+}
+.needle {
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 65px;
+  width: 3px;
+  transform-origin: bottom center;
+}
+.needle.hour {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 50px;
+  width: 4px;
+}
+.needle.minute {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 70px;
+}
+.needle.second {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 90px;
+  width: 2px;
+  background-color: #e74c3c;
+}
+.center-point {
+    background-color: #e74c3c;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+.center-point::after {
+  content: '';
+  background-color: var(--primary-color);
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.time {
+  font-size: 60px;
+}
+.date {
+  font-size: 14px;
+  color: #aaa;
+  letter-spacing: .3px;
+  text-transform: uppercase;
+}
+.date .circle {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 18px;
+  font-size: 12px;
+  transition: all .5s ease-in;
+}
+
+
+/* css footer */
+/* footer section start */
+*{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+}
+body{
+	font-size:14px;
+	background: #fff;
+    max-width:1920px;
+    margin:0 auto;
+	overflow-x:hidden;
+	font-family: poppins;
+	
+
+}
+#footer{
+	background: #f7f7f7;
+    padding: 3rem;
+	/* padding-top: 5rem; */
+	padding-top: 7rem;
+    padding-bottom: 80px;
+	background-image: url(https://arena.km.ua/wp-content/uploads/3538533.jpg);
+}
+#footer2{
+	background: #f7f7f7;
+    padding: 3rem;
+    margin-top: 0px;
+	/* padding-top: 5rem; */
+	padding-top: 7rem;
+    padding-bottom: 80px;
+	background-image: url(../images/cards/v748-toon-111.png);
+}
+.logo-footer{
+	/* max-width: 300px; */
+}
+.social-links{
+	/* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+
+}
+.social-links h2{
+	padding-bottom: 15px;
+	font-size: 20px;
+    font-weight: 600;
+}
+.social-links img{
+	padding-bottom: 25px;
+}
+.social-icons{
+	/* display: flex;
+    gap: 3rem; */
+	display: flex;
+    flex-direction: column;
+    gap: 1rem;
+	color: #777777;
+}
+.social-icons a{
+	/* font-size: 18px; */
+    /* background: #ffffff; */
+    /* box-shadow: rgb(0 0 0 / 8%) 0px 4px 12px;
+    padding: 0.4rem 1rem 0.4rem 1rem;
+    border-radius: 3px;
+	color: #82074a; */
+	/* margin-right: 18px; */
+	color: #777777;
+}
+.social-icons a:hover{
+	color: #000;
+}
+.social-icons a i{
+	box-shadow: rgb(0 0 0 / 8%) 0px 4px 12px;
+    padding: 0.4rem 1rem 0.4rem 1rem;
+    border-radius: 3px;
+    color: #82074a;
+	font-size: 16px;
+	margin-right: 12px;
+}
+li{
+	list-style: none;
+}
+.useful-link h2{
+	padding-bottom: 15px;
+	font-size: 20px;
+    font-weight: 600;
+}
+.useful-link img{
+	padding-bottom: 15px;
+}
+.use-links{
+	line-height: 32px;
+}
+.use-links li i{
+	font-size: 14px;
+    padding-right: 8px;
+    color: #898989;
+}
+.use-links li a{
+	color: #303030;
+    font-size: 15px;
+    font-weight: 500;
+	color: #777777;
+}
+.use-links li a:hover{
+	color: #000;
+}
+.address h2{
+	padding-bottom: 15px;
+	font-size: 20px;
+    font-weight: 600;
+}
+.address img{
+	padding-bottom: 15px;
+}
+.address-links li a{
+	color: #303030;
+    font-size: 15px;
+    font-weight: 500;
+	color: #777777;
+
+}
+.address-links li i{
+	font-size: 16px;
+    padding-right: 8px;
+	color: #82074a;
+
+}
+.address-links li i:nth-child(1){
+	padding-top: 9px;
+}
+.address-links .address1{
+	font-weight: 500;
+    font-size: 15px;
+	display: flex;
+}
+.address-links{
+	    line-height: 32px;
+		color: #777777;
+}
+.copy-right-sec{
+	padding: 1.8rem;
+    background: #82074a;
+    color: #fff;
+    text-align: center;
+}
+.copy-right-sec a{
+	color: #fcd462;
+    font-weight: 500;
+}
+a{
+  text-decoration:none;
+}
+
+
+/* dark mode */
+:root {
+  --canvas-color: #ffffff;
+  --hover-color: #e7e7e8;
+}
+.darkmode {
+  --canvas-color: #15202B;
+  --hover-color: #22303C;
+}
+body {
+  background-color: var(--canvas-color);
+}
+#dark-mode-toggle {
+    display: none;
+}
+.dark-mode-toggle {
+    display: inline-block;
+    cursor: pointer;
+   
+}
+.dark-mode-toggle:hover, .dark-mode-toggle:focus {
+  background-color: var(--hover-color);
+  border-radius: 16px;
+}
+.dark-mode-toggle::after {
+    content: '🌚';
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-content: center;
+    line-height: 0;
+    transition: background-color 1s,
+    transform 1s ease-in;
+}
+#dark-mode-toggle:checked+.dark-mode-toggle::after {
+    content: '🌞';
+    transform: translateX(0px) rotate(360deg);
+}
+
+/* css fotter */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+
+.nav__bars-btn{
+  width: 30px;
+  height: 30px;
+  display:none;
+}
+
+
+#nav__mobile-input{
+  display: none;
+}
+
+
+@media(max-width:1023px){
+  .nav__bars-btn{
+    display: block;
+    margin-left: 300px;
+  }
+
+
+  .slider-container{
+    display: none;
+  }
+}
+
+
+
+</style>
+
+ 
+</head>
+
+<body>
+
+
+ 
+     <header>
+     
+                  
+
+      <!-- menu -->
+      
+     
+      <header class="header">
+        <div class="header-topbar hide-on-mb">
+
+            <div class="grid wide header-topbar-container" style="display:flex;">
+
+
+                <div class="header-topbar__contact">
+
+                 
+               
+                  <img width="120px" src="./img/Nike_Swoosh_Black.webp">
+                  <img  width="120px" style="color:white;" src="./img/Three_Black.webp">
+                  <img  width="120px" src="./img/Trivago_Coloured.webp">
+                  <img  width="120px" src="./img/Whalefin_Colour_Black.webp">
+                  
+                </div>
+              
+               
+
+                <input type="checkbox" id="dark-mode-toggle">
+                <label for="dark-mode-toggle" class="dark-mode-toggle"></label>
+                <script>    // check for saved 'darkMode' in localStorage
+                  let darkMode = localStorage.getItem('darkMode'); 
+                  
+                  const darkModeToggle = document.querySelector('#dark-mode-toggle');
+                  
+                  const enableDarkMode = () => {
+                    // 1. Add the class to the body
+                    document.body.classList.add('darkmode');
+                    // 2. Update darkMode in localStorage
+                    localStorage.setItem('darkMode', 'enabled');
+                  }
+                  
+                  const disableDarkMode = () => {
+                    // 1. Remove the class from the body
+                    document.body.classList.remove('darkmode');
+                    // 2. Update darkMode in localStorage 
+                    localStorage.setItem('darkMode', null);
+                  }
+                   
+                  // If the user already visited and enabled darkMode
+                  // start things off with it on
+                  if (darkMode === 'enabled') {
+                    enableDarkMode();
+                  }
+                  
+                  // When someone clicks the button
+                  darkModeToggle.addEventListener('click', () => {
+                  
+                    // get their darkMode setting
+                    darkMode = localStorage.getItem('darkMode'); 
+                    
+                    // if it not current enabled, enable it
+                    if (darkMode !== 'enabled') {
+                      enableDarkMode();
+                    // if it has been enabled, turn it off  
+                    } else {  
+                      disableDarkMode(); 
+                    }
+                  });</script>
+           
+
+                <div class="header-topbar__login">
+                    <ul style="margin-top:10px ;">
+                        <li><a style="font-size:10px ;" href="./login.html">Đăng Nhập</a></li>
+                        <li><a href="./register.html">Đăng Kí</a></li>
+                      
+                    </ul>
+                   
+
+                </div>
+            </div>
+        </div>
+        
+    
+
+        
+        
+        <div class="header-nav">
+          
+            <div class="grid wide">
+                <div class="row">
+                  
+                    <div class="header-nav-container">
+                        <div class="col l-3 m-6 c-6">
+                            <a href="./index.html" class="header-nav__logo">
+                                <img width="300px"src="./img/logo chel.png" alt=""> CHELSEA
+                            </a>
+                        </div>
+                        <div class="col l-6 m-0 c-0">
+                            <div class="header-nav__list">
+                                <ul>
+                                    <li class="header-nav__item header-nav__item--active"><a href="">Trang chủ</a></li>
+                                    <li class="header-nav__item"><a href="./firstteam.html">Đội 1</a></li>
+                                    <li class="header-nav__item"><a href="">Huyền Thoại</a></li>
+                                    <li class="header-nav__item"><a href="./lich.html">Lịch Thi Đấu</a></li>
+                                    <li class="header-nav__item"><a href="./stadium.html">Sân Vận Động</a></li>
+                                    <li class="header-nav__item"><a href="">Tin tức</a></li>
+                                    <li class="header-nav__item"><a href="">contact</a></li>
+                                    <li class="header-nav__item"><a href="./store.html">cửa hàng</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col l-3 m-6 c-6">
+                            <div class="header-nav__control-mb">
+                                <div class="header-nav__search ">
+                                    <i class="header-nav__search-icon fas fa-search"></i>
+                                    <input type="text" class="header-nav__search-input" placeholder="Tìm kiếm...">
+                                </div>
+
+                                
+                                <label for="header-mb-bars__checkbox" class="header-mb-bars__label hide-on-pc-tb">
+                                    <i class="list-tablet-mobile fas fa-bars"></i>
+                                </label>
+
+                                <div for="nav__mobile-input" class="nav__bars-btn">
+                
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                      <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                      <path
+                                      d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"
+                                      style="fill: #333" />
+                                      </svg>
+                                    </div>
+
+                                    <input type="checkbox" id="nav__mobile-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+           
+        </div>
+
+
+
+        <nav>
+          <div class="logo">
+            <img width="50px" src="./img/logo chel.png">
+          Chelsea</div>
+        
+          <div class="navbar">
+            <ul class="nav-menu">
+              <li class="nav-item"><a href="./index.html" class="nav-link">Trang chủ </a></li>
+              <li class="nav-item"><a href="./firstteam.html" class="nav-link">Đội 1</a></li>
+              <li class="nav-item"><a href="./lichthidau.html" class="nav-link"> Lịch Thi Đấu</a></li>
+              <li class="nav-item"><a href="./stadium.html" class="nav-link">Sân Vận Động</a></li>
+              <li class="nav-item"><a href="./store.html" class="nav-link">Cửa Hàng</a></li>
+              <i class="header-nav__search-icon fas fa-search"></i>
+              <input type="text" class="header-nav__search-input" placeholder="Tìm kiếm...">
+            </ul>
+          </div>
+        
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+
+         
+          
+       
+        </nav>
+        
+        
+        </div>
+
+
+      
+    </header>
+    
+
+    <!-- js menu -->
+    <script>
+      $ = document.querySelector.bind(document)
+$$ = document.querySelectorAll.bind(document)
+
+// Header sticky
+const headerTop = $('.header-topbar-container')
+const headerNav = $('.header-nav')
+
+window.addEventListener('scroll', scrollFunction)
+
+function scrollFunction() {
+    if(document.documentElement.scrollTop >= 20 || document.body.scrollTop >= 20) {
+        headerTop.classList.add('hide')
+        headerNav.classList.add('scroll')
+    } else {
+        headerTop.classList.remove('hide')
+        headerNav.classList.remove('scroll')
+    }
+}
+
+// Search btn
+const btnSearch = $('.header-nav__search-icon')
+const inputSearch = $('.header-nav__search-input')
+btnSearch.addEventListener('click', () => {
+    inputSearch.classList.toggle('open')
+})
+
+// link active
+
+
+
+// searchHeader active
+const searchHeaders = $$('.search-header__item')
+
+searchHeaders.forEach(searchHeader => {
+    searchHeader.addEventListener('click', (e) => {
+        e.preventDefault();
+        $('.search-header__item--active').classList.remove('search-header__item--active');
+        searchHeader.classList.add('search-header__item--active');
+    })
+});
+
+
+
+// searchHeaderTlMb active
+const searchHeadersTlMb = $$('.search-header-tb-mb__item-link')
+
+searchHeadersTlMb.forEach(searchHeaderTlMb => {
+    searchHeaderTlMb.addEventListener('click', (e) => {
+        e.preventDefault();
+        $('.search-header-tb-mb__item-link--active').classList.remove('search-header-tb-mb__item-link--active');
+        searchHeaderTlMb.classList.add('search-header-tb-mb__item-link--active');
+    })
+});
+
+
+
+
+
+
+
+
+
+    </script>
+    <!-- end menu -->
+            
+
+    <!-- slider images -->
+     <div class="slider-container">
+      <div class="left-slide">
+        <div style="background-color: burlywood">
+          <h1 class="h1">Chelsea vô địch Uefa Super Cup 2020/2021</h1>
+        
+        </div>
+        <div style="background-color: rgb(254,160,0)">
+          <h1  class="h1">Chelsea vô địch Uefa Champion League 2020/2021</h1>
+
+        </div>
+       
+      </div>
+      <div class="right-slide">
+       <img src="./img/cc1.jpg">
+       
+      
+        <div style="background-image: url('./img/chelsea_uefa_super_cup2_1208.webp');"></div>
+        <div style="background-image: url('https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80');"></div>
+      </div>
+      <div class="action-buttons">
+        <button class="down-button">
+          <i class="fas fa-arrow-down"></i>
+        </button>
+        <button class="up-button">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </div> 
+
+    <script>
+      const sliderContainer = document.querySelector('.slider-container')
+const slideRight = document.querySelector('.right-slide')
+const slideLeft = document.querySelector('.left-slide')
+const upButton = document.querySelector('.up-button')
+const downButton = document.querySelector('.down-button')
+const slidesLength = slideRight.querySelectorAll('div').length
+
+let activeSlideIndex = 0
+
+slideLeft.style.top = `-${(slidesLength - 1) * 100}vh`
+
+upButton.addEventListener('click', () => changeSlide('up'))
+downButton.addEventListener('click', () => changeSlide('down'))
+
+const changeSlide = (direction) => {
+    const sliderHeight = sliderContainer.clientHeight
+    if(direction === 'up') {
+        activeSlideIndex++
+        if(activeSlideIndex > slidesLength - 1) {
+            activeSlideIndex = 0
+        }
+    } else if(direction === 'down') {
+        activeSlideIndex--
+        if(activeSlideIndex < 0) {
+            activeSlideIndex = slidesLength - 1
+        }
+    }
+
+    slideRight.style.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`
+    slideLeft.style.transform = `translateY(${activeSlideIndex * sliderHeight}px)`
+}
+    </script>
+
+
+    <!-- end slider -->
+   
+     
+
+   
+
+        <!-- first team -->
+        <div class="h1">
+          
+          Đội 1
+          
+        </div>
+      <a href="./firstteam.html">
+        <div class="example">
+          <img src="https://wallpaper.dog/large/20506643.jpg" />
+          <p>Đội 1</p>	
+        </div>
+      
+      </a>
+  
+     
+
+       
+   
+   
+   
+   
+   
+    
+   
+   <!-- Chatbot -->
+        
+
+        <!-- huan luyen vien -->
+        <main id="manager">
+            <div class="manager-visual">
+              <div class="visual-text manager-visual-items">
+                  <div class="visual-name">
+                    <div class="role ">Huấn Luyện Viên Trưởng</div>
+                    <div class="role-name  ">Thomas Tuchel</div ></div>
+                  <div class="visual-message">
+                    "Được trao cơ hội để đưa câu lạc bộ tiến lên với tất cả tiềm năng của nó là điều tuyệt vời"
+                  </div>
+              </div>
+              <div class="visual-image manager-visual-items">
+                <!-- <img width="300px" src="./img/tuchel.jpeg" alt=""> -->
+              </div>
+              <div class="visual-statics manager-visual-items">
+                <div class="match">Tổng Số Trận  Đấu <span class="number">514</span></div>
+                <div class="wins">Số Trận Thắng <span class="number">292</span></div>
+                <div class="trophies">Danh hiệu<span class="number">12</span></div>
+              </div>
+            </div>
+            <div class="manager-info">
+              <div class="info-bio">
+                <p class="bio-title">Tiểu Sử</p>
+                <p class="bio-text">Thomas Tuchel (phát âm tiếng Đức: [ˈtoːmas ˈtʊxl̩, – tuː-];[2] sinh ngày 29 tháng 8 năm 1973) là một cựu cầu thủ và huấn luyện viên bóng đá chuyên nghiệp người Đức. Hiện tại ông là huấn luyện viên trưởng của câu lạc bộ Chelsea tại Premier League. Không chỉ được thừa nhận về kiến thức chiến thuật và phong cách chơi bóng, sự nghiệp huấn luyện của Tuchel cũng được chú ý bởi những mối quan hệ không lấy gì làm tốt đẹp của chính Tuchel với các ông chủ của mình.
+                </p>
+              </div>
+              <div class="info-shortcut">
+                <div class="shortcut-items">
+                  <div class="sub-items">
+                    <p class="items-title">Chức vụ</p>
+                    <p class="items-position">Huấn Luyện Viên</p>
+                  </div>
+                  <div class="sub-items">
+                    <p class="items-title">Gia Nhập</p>
+                    <p class="items-date">26/01/2020</p>
+    
+                  </div>
+                </div>
+                <div class="shortcut-items">
+                  <div class="sub-items">
+                    <p class="items-title">Quốc Tịch</p>
+                    <p class="items-country">
+                    <div class="box">
+                      <img class="blue translate3d" width="100px"src="./img/germany.png" alt="" style="color:black;font-size:20px ;font-weight: bold;"> Đức
+                    </div>
+                
+                     
+                    </p>
+                  </div>
+                  <div class="sub-items">
+                    <p class="items-title">Trận Đấu Đầu Tiên</p>
+                    <p class="items-date">22/12/2010</p>
+                    <small>v Bayern Muchen</small>
+                  </div>
+                </div>
+                <div class="shortcut-items">
+                  <div class="sub-items">
+                    <p class="items-title">Ngày Sinh</p>
+                    <p class="items-date">29/08/1973</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+
+          <!-- legend -->
+          <main id = "legend">
+            <div class="legend-text h2">Huyền Thoại Câu Lạc Bộ</div>
+            <div class="row row__c-homepage-players-list">
+              
+              
+              <div class="col-12 col-md-6 col-lg-4">
+                <a class="c-player-card" href="https://shedwall.chelseafc.com/player/bobby-tambling">
+                  
+                  <figure>
+                   
+                    <div class="c-player-card__image">
+                      <img srcset="https://shedwall.chelseafc.com/wp-content/uploads/2019/04/BobbyTambling-931457218-640x791.jpg 640w,https://shedwall.chelseafc.com/wp-content/uploads/2019/04/BobbyTambling-931457218-768x950.jpg 768w,https://shedwall.chelseafc.com/wp-content/uploads/2019/04/BobbyTambling-931457218.jpg 1024w" sizes="(min-width: 64em) calc(33vw - 5em), (min-width: 48em) calc(50vw - 5em), calc(100vw - 5em)" class="" title="Bobby Tambling" alt="Bobby Tambling">
+                    </div>
+                    <figcaption class="c-player-card__caption"><div class="d-flex">
+                      <div class="c-player-card__number">8</div>
+                      <h2 class="c-player-card__name">
+                        <img class="c-player-card__name__flag" src="https://shedwall.chelseafc.com/wp-content/uploads/2018/07/flag-england.jpg">
+                        <small>Bobby</small>Tambling</h2>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </a>
+              </div>
+                  
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <a class="c-player-card" href="/player/peter-bonetti">
+                      <figure>
+                       <div class="c-player-card__image"><img srcset="https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Bonetti-Hero-640x960.jpg 640w,https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Bonetti-Hero-768x1152.jpg 768w,https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Bonetti-Hero-1024x1537.jpg 1024w" sizes="(min-width: 64em) calc(33vw - 5em), (min-width: 48em) calc(50vw - 5em), calc(100vw - 5em)" class="" title="Peter Bonetti" alt="Peter Bonetti"></div><figcaption class="c-player-card__caption"><div class="d-flex">
+                        <div class="c-player-card__number">1
+
+                        </div>
+                        <h2 class="c-player-card__name">
+                          <img class="c-player-card__name__flag" src="https://shedwall.chelseafc.com/wp-content/uploads/2018/07/flag-england.jpg"><small>Peter</small>Bonetti
+                        </h2>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </a>
+              </div>
+                  
+                  
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <a class="c-player-card" href="/player/petr-cech">
+                      <figure>
+                        <div class="c-player-card__image">
+                          <img srcset="https://shedwall.chelseafc.com/wp-content/uploads/2018/07/PETR-CECH-2012-13-640x900.jpg 640w,https://shedwall.chelseafc.com/wp-content/uploads/2018/07/PETR-CECH-2012-13-768x1079.jpg 768w,https://shedwall.chelseafc.com/wp-content/uploads/2018/07/PETR-CECH-2012-13-1024x1439.jpg 1024w" sizes="(min-width: 64em) calc(33vw - 5em), (min-width: 48em) calc(50vw - 5em), calc(100vw - 5em)" class="" title="Petr Cech" alt="Petr Cech">
+                        </div>
+                        <figcaption class="c-player-card__caption">
+                          <div class="d-flex">
+                            <div class="c-player-card__number">1
+
+                            </div>
+                            <h2 class="c-player-card__name">
+                              <img class="c-player-card__name__flag" src="https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Czech-Republic.png"><small>Petr</small>Cech
+                            </h2>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                  </div>
+                  
+                  
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <a class="c-player-card" href="/player/ashley-cole">
+                      <figure>
+                        <div class="c-player-card__image">
+                          <img srcset="https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Cole-hero-640x1050.jpg 640w,https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Cole-hero-768x1260.jpg 768w,https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Cole-hero-1024x1679.jpg 1024w" sizes="(min-width: 64em) calc(33vw - 5em), (min-width: 48em) calc(50vw - 5em), calc(100vw - 5em)" class="" title="Ashley Cole" alt="Ashley Cole"></div><figcaption class="c-player-card__caption"><div class="d-flex"><div class="c-player-card__number">3
+                            
+                          </div>
+                          <h2 class="c-player-card__name">
+                            <img class="c-player-card__name__flag" src="https://shedwall.chelseafc.com/wp-content/uploads/2018/07/flag-england.jpg"><small>Ashley</small>Cole
+                          </h2>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </a>
+                </div>
+                  
+                  
+                  
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <a class="c-player-card" href="/player/marcel-desailly">
+                      <figure>
+                        <div class="c-player-card__image">
+                          <img srcset="https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Desailly-Hero.jpg 640w,https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Desailly-Hero.jpg 768w,https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Desailly-Hero.jpg 1024w" sizes="(min-width: 64em) calc(33vw - 5em), (min-width: 48em) calc(50vw - 5em), calc(100vw - 5em)" class="" title="Marcel Desailly" alt="Marcel Desailly"></div><figcaption class="c-player-card__caption">
+                            <div class="d-flex">
+                              <div class="c-player-card__number">6
+
+                              </div>
+                              <h2 class="c-player-card__name">
+                                <img class="c-player-card__name__flag" src="https://shedwall.chelseafc.com/wp-content/uploads/2018/07/flag-france.jpg"><small>Marcel</small>Desailly
+                              </h2>
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </div>
+                  
+                  
+                  
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <a class="c-player-card" href="/player/kerry-dixon">
+                      <figure>
+                        <div class="c-player-card__image">
+                          <img srcset="https://shedwall.chelseafc.com/wp-content/uploads/2018/07/Dixon_1-640x1000.jpg 640w,https://shedwall.chelseafc.com/wp-content/uploads/2018/07/Dixon_1-768x1200.jpg 768w,https://shedwall.chelseafc.com/wp-content/uploads/2018/07/Dixon_1-1024x1600.jpg 1024w" sizes="(min-width: 64em) calc(33vw - 5em), (min-width: 48em) calc(50vw - 5em), calc(100vw - 5em)" class="" title="Kerry Dixon" alt="Kerry Dixon"></div><figcaption class="c-player-card__caption">
+                            <div class="d-flex">
+                              <div class="c-player-card__number">16
+
+                              </div>
+                              <h2 class="c-player-card__name">
+                                <img class="c-player-card__name__flag" src="https://shedwall.chelseafc.com/wp-content/uploads/2018/07/flag-england.jpg"><small>Kerry</small>Dixon
+                              </h2>
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </div>
+                  
+                  
+                  
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <a class="c-player-card" href="/player/didier-drogba">
+                      <figure>
+                        <div class="c-player-card__image">
+                          <img srcset="https://shedwall.chelseafc.com/wp-content/uploads/2018/07/144814985-640x912.jpg 640w,https://shedwall.chelseafc.com/wp-content/uploads/2018/07/144814985-768x1094.jpg 768w,https://shedwall.chelseafc.com/wp-content/uploads/2018/07/144814985-1024x1459.jpg 1024w" sizes="(min-width: 64em) calc(33vw - 5em), (min-width: 48em) calc(50vw - 5em), calc(100vw - 5em)" class="" title="Didier Drogba" alt="Didier Drogba">
+                        </div>
+                        <figcaption class="c-player-card__caption">
+                          <div class="d-flex">
+                            <div class="c-player-card__number">11
+
+                            </div>
+                            <h2 class="c-player-card__name">
+                              <img class="c-player-card__name__flag" src="https://shedwall.chelseafc.com/wp-content/uploads/2018/07/flag-france.jpg"><small>Didier</small>Drogba
+                            </h2>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                  </div>
+                  
+                  
+                  
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <a class="c-player-card" href="/player/ron-harris">
+                      <figure>
+                        <div class="c-player-card__image"><img srcset="https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Harris-hero-640x645.jpg 640w,https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Harris-hero-768x774.jpg 768w,https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Harris-hero-1024x1033.jpg 1024w" sizes="(min-width: 64em) calc(33vw - 5em), (min-width: 48em) calc(50vw - 5em), calc(100vw - 5em)" class="" title="Ron Harris" alt="Ron Harris"></div><figcaption class="c-player-card__caption">
+                          <div class="d-flex">
+                            <div class="c-player-card__number">3
+
+                            </div>
+                            <h2 class="c-player-card__name"><img class="c-player-card__name__flag" src="https://shedwall.chelseafc.com/wp-content/uploads/2018/07/flag-england.jpg"><small>Ron</small>Harris
+                            </h2>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                  </div>
+                  
+                  
+                  
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <a class="c-player-card" href="/player/jimmy-floyd-hasselbaink">
+                      <figure>
+                        <div class="c-player-card__image">
+                          <img srcset="https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Hasselbaink-hero-640x955.jpg 640w,https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Hasselbaink-hero-768x1146.jpg 768w,https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Hasselbaink-hero-1024x1528.jpg 1024w" sizes="(min-width: 64em) calc(33vw - 5em), (min-width: 48em) calc(50vw - 5em), calc(100vw - 5em)" class="" title="Jimmy Floyd Hasselbaink" alt="Jimmy Floyd Hasselbaink"></div><figcaption class="c-player-card__caption"><div class="d-flex">
+                            <div class="c-player-card__number">9
+
+                            </div>
+                            <h2 class="c-player-card__name">
+                              <img class="c-player-card__name__flag" src="https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Netherlands.png"><small>Jimmy Floyd</small>Hasselbaink</h2>
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </div>
+                  
+                  
+                  
+                  
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <a class="c-player-card" href="/player/branislav-ivanovic"><figure><div class="c-player-card__image">
+                      <img srcset="https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Ivanovic-Hero-640x928.jpg 640w,https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Ivanovic-Hero-768x1114.jpg 768w,https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Ivanovic-Hero-1024x1485.jpg 1024w" sizes="(min-width: 64em) calc(33vw - 5em), (min-width: 48em) calc(50vw - 5em), calc(100vw - 5em)" class="" title="Branislav Ivanovic" alt="Branislav Ivanovic"></div><figcaption class="c-player-card__caption"><div class="d-flex">
+                        <div class="c-player-card__number">2
+
+                        </div>
+                        <h2 class="c-player-card__name">
+                          <img class="c-player-card__name__flag" src="https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Serbia.png"><small>Branislav</small>Ivanovic
+                        </h2>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </a>
+                </div>
+                  
+                  
+                  
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <a class="c-player-card" href="/player/frank-lampard">
+                      <figure>
+                        <div class="c-player-card__image">
+                          <img srcset="https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Lampard-Hero-640x960.jpg 640w,https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Lampard-Hero-768x1151.jpg 768w,https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Lampard-Hero-1024x1535.jpg 1024w" sizes="(min-width: 64em) calc(33vw - 5em), (min-width: 48em) calc(50vw - 5em), calc(100vw - 5em)" class="" title="Frank Lampard" alt="Frank Lampard">
+                        </div>
+                        <figcaption class="c-player-card__caption"><div class="d-flex"><div class="c-player-card__number">8
+
+                        </div>
+                        <h2 class="c-player-card__name">
+                        <img class="c-player-card__name__flag" src="https://shedwall.chelseafc.com/wp-content/uploads/2018/07/flag-england.jpg"><small>Frank</small>Lampard
+                      </h2>
+                    </div>
+                  </figcaption>
+                </figure>
+              </a>
+                </div>
+                  
+                  
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <a class="c-player-card" href="/player/peter-osgood">
+                      <figure>
+                        <div class="c-player-card__image"><img srcset="https://shedwall.chelseafc.com/wp-content/uploads/2018/07/1571652-640x967.jpg 640w,https://shedwall.chelseafc.com/wp-content/uploads/2018/07/1571652-768x1160.jpg 768w,https://shedwall.chelseafc.com/wp-content/uploads/2018/07/1571652-1024x1547.jpg 1024w" sizes="(min-width: 64em) calc(33vw - 5em), (min-width: 48em) calc(50vw - 5em), calc(100vw - 5em)" class="" title="Peter Osgood" alt="Peter Osgood"></div><figcaption class="c-player-card__caption"><div class="d-flex"><div class="c-player-card__number">9
+
+                        </div>
+                        <h2 class="c-player-card__name"><img class="c-player-card__name__flag" src="https://shedwall.chelseafc.com/wp-content/uploads/2018/07/flag-england.jpg"><small>Peter</small>Osgood
+                        </h2>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </a>
+                </div>
+                  
+                  
+                  
+                  
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <a class="c-player-card" href="/player/john-terry">
+                      <figure>
+                        <div class="c-player-card__image"><img srcset="https://shedwall.chelseafc.com/wp-content/uploads/2018/07/83569604-640x899.jpg 640w,https://shedwall.chelseafc.com/wp-content/uploads/2018/07/83569604-768x1079.jpg 768w,https://shedwall.chelseafc.com/wp-content/uploads/2018/07/83569604-1024x1438.jpg 1024w" sizes="(min-width: 64em) calc(33vw - 5em), (min-width: 48em) calc(50vw - 5em), calc(100vw - 5em)" class="" title="John Terry" alt="John Terry">
+                        </div>
+                        <figcaption class="c-player-card__caption">
+                          <div class="d-flex">
+                            <div class="c-player-card__number">26
+
+                            </div>
+                            <h2 class="c-player-card__name">
+                              <img class="c-player-card__name__flag" src="https://shedwall.chelseafc.com/wp-content/uploads/2018/07/flag-england.jpg"><small>John</small>Terry
+                            </h2>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                </div>
+                  
+                  
+                  
+                  
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <a class="c-player-card" href="/player/ray-wilkins">
+                      <figure>
+                        <div class="c-player-card__image">
+                          <img srcset="https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Wilkin-hero-640x1010.jpg 640w,https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Wilkin-hero-768x1212.jpg 768w,https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Wilkin-hero-1024x1616.jpg 1024w" sizes="(min-width: 64em) calc(33vw - 5em), (min-width: 48em) calc(50vw - 5em), calc(100vw - 5em)" class="" title="Ray Wilkins" alt="Ray Wilkins"
+                          ></div>
+                          <figcaption class="c-player-card__caption">
+                            <div class="d-flex">
+                              <div class="c-player-card__number">8
+
+                              </div>
+                              <h2 class="c-player-card__name">
+                                <img class="c-player-card__name__flag" src="https://shedwall.chelseafc.com/wp-content/uploads/2018/07/flag-england.jpg"><small>Ray</small>Wilkins
+                              </h2>
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </a>
+                </div>
+                  
+                  
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <a class="c-player-card" href="/player/dennis-wise">
+                      <figure>
+                        <div class="c-player-card__image">
+                          <img srcset="https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Wise-Hero-640x975.jpg 640w,https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Wise-Hero-768x1170.jpg 768w,https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Wise-Hero-1024x1560.jpg 1024w" sizes="(min-width: 64em) calc(33vw - 5em), (min-width: 48em) calc(50vw - 5em), calc(100vw - 5em)" class="" title="Dennis Wise" alt="Dennis Wise">
+                        </div>
+                        <figcaption class="c-player-card__caption">
+                          <div class="d-flex">
+                            <div class="c-player-card__number">11
+
+                            </div>
+                            <h2 class="c-player-card__name">
+                              <img class="c-player-card__name__flag" src="https://shedwall.chelseafc.com/wp-content/uploads/2018/07/flag-england.jpg"><small>Dennis</small>Wise
+                            </h2>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                </div>
+                  
+                  
+                  <div class="col-12 col-md-6 col-lg-4"
+                  ><a class="c-player-card" href="/player/gianluca-vialli"><figure><div class="c-player-card__image">
+                    <img srcset="https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Vialli-hero-2-640x953.jpg 640w,https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Vialli-hero-2-768x1143.jpg 768w,https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Vialli-hero-2-1024x1524.jpg 1024w" sizes="(min-width: 64em) calc(33vw - 5em), (min-width: 48em) calc(50vw - 5em), calc(100vw - 5em)" class="" title="Gianluca Vialli" alt="Gianluca Vialli">
+                  </div>
+                  <figcaption class="c-player-card__caption">
+                    <div class="d-flex">
+                      <div class="c-player-card__number">9
+
+                      </div>
+                      <h2 class="c-player-card__name">
+                        <img class="c-player-card__name__flag" src="https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Italy.png"><small>Gianluca</small>Vialli
+                      </h2>
+                    </div>
+                  </figcaption>
+                </figure>
+              </a>
+                </div>
+                  
+                  
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <a class="c-player-card" href="/player/gianfranco-zola">
+                      <figure>
+                        <div class="c-player-card__image">
+                          <img srcset="https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Zola-hero-2-640x964.jpg 640w,https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Zola-hero-2-768x1157.jpg 768w,https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Zola-hero-2-1024x1542.jpg 1024w" sizes="(min-width: 64em) calc(33vw - 5em), (min-width: 48em) calc(50vw - 5em), calc(100vw - 5em)" class="" title="Gianfranco Zola" alt="Gianfranco Zola"></div><figcaption class="c-player-card__caption"><div class="d-flex"><div class="c-player-card__number">25
+
+                          </div>
+                          <h2 class="c-player-card__name"><img class="c-player-card__name__flag" src="https://shedwall.chelseafc.com/wp-content/uploads/2018/08/Italy.png"><small>Gianfranco</small>Zola
+                          </h2>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </a>
+                </div>
+                
+
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              </div>
+           
+         
+           
+
+          </main>
+          <!-- <script src="./js/legend.js"></script> -->
+
+          <!-- highlight -->
+          
+            <h1 class="h1">highlight Trận Đấu</h1>
+            <div style="display:flex; justify-content:space-around ;">
+              <div>
+                <h1>Chelsea vs Everton</h1>
+                <iframe width="400" height="315" src="https://www.youtube.com/embed/Cc113mVe2rY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div>
+                <h1>Chelsea vs Tottenham</h1>
+                <iframe width="400" height="315" src="https://www.youtube.com/embed/5TNHkgrLuTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+           
+            
+         
+
+          <!-- news -->
+          <div class="main">
+            <h1 class="h1" style="margin-top:20px">Tin Tức Câu Lạc Bộ</h1>
+            <ul class="cards">
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img src="https://media.bongda.com.vn/files/phi.do/2022/08/16/casadei-0940.jpg"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">
+                      Chelsea ký hợp đồng 6 năm với Milinkovic-Savic 2.0</h2>
+                      
+                      <p class="card_text">Mới đây, Chelsea đã chi ra 15 triệu euro để chiêu mộ cầu thủ sinh năm 2003 của Inter Milan.</p>
+                    <a href="https://www.bongda.com.vn/chelsea-ky-hop-dong-6-nam-voi-milinkovic-savic-20-d649732.html">
+                      <button class="btn card_btn">Xem Chi Tiết</button>
+                    </a>
+                     
+                  </div>
+                </div>
+              </li>
+             
+              
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img src="https://media.bongda.com.vn/files/phong.huynh/2022/08/16/gettyimages-1414677423-612x612-0546.jpg"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">"Siêu bom" của Chelsea bất mãn với CLB</h2>
+                    <p class="card_text">Đội chủ sân Stamford Bridge còn có kế hoạch ký kết thêm một vài bản hợp đồng đắt giá trước khi TTCN mùa Hè đóng cửa.</p>
+                   <a href="https://www.bongda.com.vn/sieu-bom-cua-chelsea-bat-man-voi-clb-d649715.html">
+                    <button class="btn card_btn">Xem chi tiết</button>
+                   </a>
+
+           
+                  </div>
+                </div>
+              </li>
+              
+              
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img src="https://media.bongda.com.vn/files/phong.huynh/2022/08/15/gettyimages-1242487528-612x612-1819.jpg"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">Chelsea nhận báo giá 50 triệu bảng</h2>
+                    <p class="card_text">Đội chủ sân Stamford Bridge liệu có chấp nhận 'bạo chi' cho một tài năng mới nổi của bóng đá Anh?</p>
+                    <a href="https://www.bongda.com.vn/chelsea-nhan-bao-gia-50-trieu-bang-d649683.html">
+                      <button class="btn card_btn">Xem chi tiết</button>
+                    </a>
+                    
+                  </div>
+                </div>
+              </li>
+              
+              
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img src="https://media.bongda.com.vn/files/phong.lu/2022/03/22/3-1003.jpg"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">Chelsea ra giá đầu cho Aubameyang, Barca có câu trả lời</h2>
+                    <p class="card_text">Đội chủ sân Stamford Bridge đã bắt đầu triển khai kế hoạch chiêu mộ cựu tiền đạo của Pháo thủ.</p>
+                   <a href="https://www.bongda.com.vn/chelsea-ra-gia-dau-cho-aubameyang-barca-co-cau-tra-loi-d649643.html">
+                    <button class="btn card_btn">Xem chi tiết</button>
+                   </a>
+
+        
+                  </div>
+                </div>
+              </li>
+              
+              
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img src="https://media.bongda.com.vn/files/anh.nguyen/2022/07/28/tuchel-1204.jpg"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">Tuchel xác định 3 chữ ký phải có trước khi TTCN khép lại</h2>
+                    <p class="card_text">Tuchel xác định 3 chữ ký phải có trước khi TTCN khép lại</p>
+                    <a href="https://www.bongda.com.vn/tuchel-xac-dinh-3-chu-ky-phai-co-truoc-khi-ttcn-khep-lai-d649563.html">
+                      <button class="btn card_btn">Xem chi tiết</button>
+                    </a>
+                    
+                  </div>
+                </div>
+              </li>
+              
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img src="https://media.bongda.com.vn/files/thach.pham/2022/08/13/chelsea-nhan-tin-vui-trong-thuong-vu-fofana-0608.jpg"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">Chelsea đạt thỏa thuận cá nhân với "siêu bom" 95 triệu euro</h2>
+                    <p class="card_text"> Chelsea đang nỗ lực làm việc để đưa về cho HLV Thomas Tuchel những cái tên ưng ý nhất trong kỳ chuyển nhượng mùa hè 2022.</p>
+                    <a href="https://www.bongda.com.vn/chelsea-dat-thoa-thuan-ca-nhan-voi-sieu-bom-95-trieu-euro-d649394.html">
+                      <button class="btn card_btn">Xem chi tiết</button>
+                    </a>
+                    
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+         
+
+
+          <!-- news -->
+          <!-- <h1 style="color:#007bff">Tin tức</h1>
+         <div style="background-color: #fff;"class="news">a
+        
+          <div style="display:block;">
+            <a style="text-decoration:none;" href="https://www.bongda.com.vn/chelsea-thang-tram-thomas-tuchel-va-buoc-duong-chong-gai-d648428.html">
+              <h1>
+                Chelsea thăng trầm: Thomas Tuchel và bước đường chông gai
+              </h1>
+              <div class="detailnews box">
+                <img class="blue translate3d" src="./img/news/chelsea-thang-tram-thomas-tuchel-va-buoc-duong-chong-gai-144059.png">
+                <span style="color:#666;font-size:14px;">Sau mùa giải thất bại, Chelsea đổi chủ rồi tiếp tục gặp khó khăn về mặt nhân sự, khiến Thomas Thuchel đối mặt với bước đường chông gai khi Ngoại hạng Anh 2022-23 khởi tranh.</span>
+              </div>
+            </a>
+ 
+            <a style="text-decoration:none;" href="https://www.bongda.com.vn/chelsea-dung-luong-khung-thuyet-phuc-bom-tan-d648423.html">
+              <h1>
+                Chelsea dùng lương khủng thuyết phục 'bom tấn'
+              </h1>
+              <div class="detailnews box">
+                <img class="blue translate3d" src="./img/news/fonana.jpg">
+                <span style="color:#666">Chelsea muốn sử dụng 'đòn bẩy' tài chính để thuyết phục một mục tiêu hàng đầu của mình.</span>
+              </div>
+            </a>
+
+            <a style="text-decoration:none;" href="https://www.bongda.com.vn/chelsea-tung-dong-thai-vu-de-jong-den-hoi-ket-d648391.html">
+              <h1>
+                Chelsea tung động thái, vụ De Jong đến hồi kết
+              </h1>
+              <div class="detailnews box">
+                <img class="blue translate3d" src="./img/news/đe jong.jpg">
+                <span style="color:#666">Đội chủ sân Stamford Bridge muốn cướp mục tiêu hàng đầu của Manchester United để tạo nên một bom tấn nữa ở kỳ chuyển nhượng.</span>
+              </div>
+            </a>
+            
+          </div>
+         </div> -->
+
+
+         <!-- lich thi dau -->
+        <div>
+          <h1 style="margin-top:30px;color:#001489;">Lịch thi đấu</h1>
+          <div data-habitat="C1"><section class="fixture-summary"><div class="fixture-summary__background"><div class="responsive-image"><div class="responsive-image__preload-ref"><picture><source data-srcset="https://img.chelseafc.com//image/upload/f_auto,q_auto:best,f_auto,q_90,c_fill,g_faces,h_540,w_1600,w_390/Background Patterns/04447_ReplatformWebsiteHeader_V235.jpg" media="(max-width: 600px)" srcset="https://img.chelseafc.com//image/upload/f_auto,q_auto:best,f_auto,q_90,c_fill,g_faces,h_540,w_1600,w_390/Background Patterns/04447_ReplatformWebsiteHeader_V235.jpg"><source data-srcset="https://img.chelseafc.com//image/upload/f_auto,q_auto:best,f_auto,q_90,c_fill,g_faces,h_540,w_1600,w_820/Background Patterns/04447_ReplatformWebsiteHeader_V235.jpg" media="(max-width: 768px)" srcset="https://img.chelseafc.com//image/upload/f_auto,q_auto:best,f_auto,q_90,c_fill,g_faces,h_540,w_1600,w_820/Background Patterns/04447_ReplatformWebsiteHeader_V235.jpg"><source data-srcset="https://img.chelseafc.com//image/upload/f_auto,q_auto:best,f_auto,q_90,c_fill,g_faces,h_540,w_1600/Background Patterns/04447_ReplatformWebsiteHeader_V235.jpg" media="(max-width: 1176px)" srcset="https://img.chelseafc.com//image/upload/f_auto,q_auto:best,f_auto,q_90,c_fill,g_faces,h_540,w_1600/Background Patterns/04447_ReplatformWebsiteHeader_V235.jpg"><img src="https://img.chelseafc.com//image/upload/f_auto,q_auto:best,f_auto,q_90,c_fill,g_faces,h_540,w_1600/Background Patterns/04447_ReplatformWebsiteHeader_V235.jpg" data-src="https://img.chelseafc.com//image/upload/f_auto,q_auto:best,f_auto,q_90,c_fill,g_faces,h_540,w_1600/Background Patterns/04447_ReplatformWebsiteHeader_V235.jpg" class="blur-up image-is-loaded lazyloaded ls-is-cached" alt="Background Patterns/04447_ReplatformWebsiteHeader_V235"></picture></div></div></div><div class="fixture-summary__tabs"><div class="tabs  "><div class="container"><div class="undefined tabs__nav"><div class="tabs__buttons-container"><div class="tabs__buttons " role="tablist"><button id="tab-Mens" role="tab" type="button" tabindex="0" aria-selected="true" class="tabs__button tabs__button--selected">First team</button><button id="tab-Women" role="tab" type="button" tabindex="-1" aria-selected="false" class="tabs__button"></button><button id="tab-Academy" role="tab" type="button" tabindex="-1" aria-selected="false" class="tabs__button"></button></div></div></div></div><div role="tabpanel" tabindex="0" aria-labelledby="tab-Mens" class="tabs__panel"><div class="container"><div class="fixture-cards"><div class="fixture-cards__mobile"><div class="carousel gtm-carousel"><div class="carousel__header"><div class="carousel__controls"><button type="button" class="carousel__previous-slide " disabled="" aria-label="previous"><svg aria-hidden="true"><use xlink:href="/assets/spritemap.svg#sprite-chevron-right"></use></svg></button><button type="button" class="carousel__next-slide " disabled="" aria-label="next"><svg aria-hidden="true"><use xlink:href="/assets/spritemap.svg#sprite-chevron-right"></use></svg></button></div></div><div class="carousel__body"><div class="slick-slider slick-initialized" dir="ltr"><div class="slick-list"><div class="slick-track" style="opacity: 1; transform: translate3d(0px, 0px, 0px); width: 984px;"><div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 328px;"><div><div class="fixture-result-card opta-id-2311263 fixture-result-card--is-result fixture-result-card--is-postmatch fixture-result-card--is-mobile fixture-result-card--ctas-x1"><div class="fixture-result-card__details"><div class="fixture-result-card__date"><span>29 tháng 7 2022</span></div><div class="fixture-result-card__competition">Giao hữu</div></div><div class="fixture-result-card__match-up"><div class="match-up match-up--is-result match-up--is-mobile"><div class="match-up__team match-up__team--home"><div class="match-up__crest"><img src="https://clublogos.stadion.io/assets/ClubLogos/Football/136.png" alt="Udinese"></div><div class="match-up__team-name">Udinese</div></div><div class="react-reveal fadeInUp match-up__vs" style="animation-duration: 1000ms; animation-delay: 300ms; animation-iteration-count: 1; opacity: 1;"><div class="match-up__scores"><div class="match-up__score">1</div><div class="match-up__score">3</div></div></div><div class="match-up__team match-up__team--away"><div class="match-up__crest"><img src="https://clublogos.stadion.io/assets/ClubLogos/Football/English/630.png" alt="Chelsea"></div><div class="match-up__team-name">Chelsea</div></div></div></div><div class="fixture-result-card__ctas"><a href="/en/match/udinese-vs-chelsea-friendly-2022-07-29" class="button gtm-cta-click button--secondary  button--has-label button--has-icon"><div class="button__label">Match Centre</div><div class="button__icon-end"><svg><title>Match Centre</title><use xlink:href="/assets/spritemap.svg#sprite-chelsea-arrow-right"></use></svg></div></a></div></div></div></div><div data-index="1" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline: none; width: 328px;"><div><div class="fixture-result-card opta-id-2292812 fixture-result-card--is-prematch fixture-result-card--is-mobile fixture-result-card--ctas-x1"><div class="fixture-result-card__details"><div class="fixture-result-card__date"><span>Sat 06 Aug 2022</span></div><div class="fixture-result-card__competition">Premier League</div></div><div class="fixture-result-card__match-up"><div class="match-up match-up--is-mobile"><div class="match-up__team match-up__team--home"><div class="match-up__crest"><img src="https://clublogos.stadion.io/assets/ClubLogos/Football/English/650.png" alt="Everton"></div><div class="match-up__team-name">Everton</div></div><div class="react-reveal match-up__vs"><span>17:30</span></div><div class="match-up__team match-up__team--away"><div class="match-up__crest"><img src="https://clublogos.stadion.io/assets/ClubLogos/Football/English/630.png" alt="Chelsea"></div><div class="match-up__team-name">Chelsea</div></div></div></div><div class="fixture-result-card__ctas"><a href="/en/match/everton-vs-chelsea-english-premier-league-2022-08-06" class="button gtm-cta-click button--secondary  button--has-label button--has-icon"><div class="button__label">Match Centre</div><div class="button__icon-end"><svg><title>Match Centre</title><use xlink:href="/assets/spritemap.svg#sprite-chelsea-arrow-right"></use></svg></div></a></div></div></div></div><div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 328px;"><div><div class="fixture-result-card opta-id-2292824 fixture-result-card--is-prematch fixture-result-card--is-mobile fixture-result-card--ctas-x1"><div class="fixture-result-card__details"><div class="fixture-result-card__date"><span>Sun 14 Aug 2022</span></div><div class="fixture-result-card__competition">Premier League</div></div><div class="fixture-result-card__match-up"><div class="match-up match-up--is-mobile"><div class="match-up__team match-up__team--home"><div class="match-up__crest"><img src="https://clublogos.stadion.io/assets/ClubLogos/Football/English/630.png" alt="Chelsea"></div><div class="match-up__team-name">Chelsea</div></div><div class="react-reveal match-up__vs"><span>16:30</span></div><div class="match-up__team match-up__team--away"><div class="match-up__crest"><img src="https://clublogos.stadion.io/assets/ClubLogos/Football/English/728.png" alt="Tottenham Hotspur"></div><div class="match-up__team-name">Tottenham Hotspur</div></div></div></div><div class="fixture-result-card__ctas"><a href="/en/match/chelsea-vs-tottenham-hotspur-english-premier-league-2022-08-14" class="button gtm-cta-click button--secondary  button--has-label button--has-icon"><div class="button__label">Match Centre</div><div class="button__icon-end"><svg><title>Match Centre</title><use xlink:href="/assets/spritemap.svg#sprite-chelsea-arrow-right"></use></svg></div></a></div></div></div></div></div></div></div></div></div></div><div class="fixture-cards__desktop"><div class="fixture-result-card opta-id-2311263 fixture-result-card--is-result fixture-result-card--is-postmatch fixture-result-card--is-mobile fixture-result-card--ctas-x1"><div class="fixture-result-card__details"><div class="fixture-result-card__date"><span>Fri 29 Jul 2022</span></div><div class="fixture-result-card__competition">Friendly</div></div><div class="fixture-result-card__match-up"><div class="match-up match-up--is-result match-up--is-mobile"><div class="match-up__team match-up__team--home"><div class="match-up__crest"><img src="https://clublogos.stadion.io/assets/ClubLogos/Football/136.png" alt="Udinese"></div><div class="match-up__team-name">Udinese</div></div><div class="react-reveal fadeInUp match-up__vs" style="animation-duration: 1000ms; animation-delay: 300ms; animation-iteration-count: 1; opacity: 1;"><div class="match-up__scores"><div class="match-up__score">1</div><div class="match-up__score">3</div></div></div><div class="match-up__team match-up__team--away"><div class="match-up__crest"><img src="https://clublogos.stadion.io/assets/ClubLogos/Football/English/630.png" alt="Chelsea"></div><div class="match-up__team-name">Chelsea</div></div></div></div><div class="fixture-result-card__ctas"><a href="/en/match/udinese-vs-chelsea-friendly-2022-07-29" class="button gtm-cta-click button--secondary  button--has-label button--has-icon"><div class="button__label">Match Centre</div><div class="button__icon-end"><svg><title>Match Centre</title><use xlink:href="/assets/spritemap.svg#sprite-chelsea-arrow-right"></use></svg></div></a></div></div><div class="fixture-result-card opta-id-2292812 fixture-result-card--is-prematch fixture-result-card--is-mobile fixture-result-card--ctas-x1"><div class="fixture-result-card__details"><div class="fixture-result-card__date"><span>Sat 06 Aug 2022</span></div><div class="fixture-result-card__competition">Premier League</div></div><div class="fixture-result-card__match-up"><div class="match-up match-up--is-mobile"><div class="match-up__team match-up__team--home"><div class="match-up__crest"><img src="https://clublogos.stadion.io/assets/ClubLogos/Football/English/650.png" alt="Everton"></div><div class="match-up__team-name">Everton</div></div><div class="react-reveal fadeInUp match-up__vs" style="animation-duration: 1000ms; animation-delay: 300ms; animation-iteration-count: 1; opacity: 1;"><span>17:30</span></div><div class="match-up__team match-up__team--away"><div class="match-up__crest"><img src="https://clublogos.stadion.io/assets/ClubLogos/Football/English/630.png" alt="Chelsea"></div><div class="match-up__team-name">Chelsea</div></div></div></div><div class="fixture-result-card__ctas"><a href="/en/match/everton-vs-chelsea-english-premier-league-2022-08-06" class="button gtm-cta-click button--secondary  button--has-label button--has-icon"><div class="button__label">Match Centre</div><div class="button__icon-end"><svg><title>Match Centre</title><use xlink:href="/assets/spritemap.svg#sprite-chelsea-arrow-right"></use></svg></div></a></div></div><div class="fixture-result-card opta-id-2292824 fixture-result-card--is-prematch fixture-result-card--is-mobile fixture-result-card--ctas-x1"><div class="fixture-result-card__details"><div class="fixture-result-card__date"><span>Sun 14 Aug 2022</span></div><div class="fixture-result-card__competition">Premier League</div></div><div class="fixture-result-card__match-up"><div class="match-up match-up--is-mobile"><div class="match-up__team match-up__team--home"><div class="match-up__crest"><img src="https://clublogos.stadion.io/assets/ClubLogos/Football/English/630.png" alt="Chelsea"></div><div class="match-up__team-name">Chelsea</div></div><div class="react-reveal fadeInUp match-up__vs" style="animation-duration: 1000ms; animation-delay: 300ms; animation-iteration-count: 1; opacity: 1;"><span>16:30</span></div><div class="match-up__team match-up__team--away"><div class="match-up__crest"><img src="https://clublogos.stadion.io/assets/ClubLogos/Football/English/728.png" alt="Tottenham Hotspur"></div><div class="match-up__team-name">Tottenham Hotspur</div></div></div></div><div class="fixture-result-card__ctas"><a href="/en/match/chelsea-vs-tottenham-hotspur-english-premier-league-2022-08-14" class="button gtm-cta-click button--secondary  button--has-label button--has-icon"><div class="button__label">Match Centre</div><div class="button__icon-end"><svg><title>Match Centre</title><use xlink:href="/assets/spritemap.svg#sprite-chelsea-arrow-right"></use></svg></div></a></div></div></div></div></div></div></div></div><div class="fixture-summary__advert"><div class="container"><div class="hubolt-watch-advert"><div class="hubolt-watch-advert__inner"><div class="hubolt-watch-advert__logo"><svg><title>Hubolt logo</title><use xlink:href="/assets/spritemap.svg#sprite-hublot-logo"></use></svg></div><div id="flashContentHublot"><a href="https://www.hublot.com/" target="_blank" class="global-link" rel="noreferrer"><div class="label" style="visibility: hidden;">Hubolt</div><div id="debug"></div><div class="hublot-timekeeper visible"><div class="hublot-watch"><div class="watch desktop"></div><div class="handles"><div class="handle hour" style="transform: rotate(118deg);"></div><div class="handle minute" style="transform: rotate(340.551deg);"></div><div class="handle second"></div><div class="handle seconds-chrono" style="transform: rotate(273.072deg);"></div><div class="logo-glass"></div></div></div></div></a></div><div class="hubolt-watch-advert__text"><svg><title>Hubolt</title><use xlink:href="/assets/spritemap.svg#sprite-hublot-off-timekeeper"></use></svg></div></div></div></div></div></section></div>
+        </div>
+        
+          <!-- nha tai tro -->
+         <div class="container"><div class="sponsors-block__sponsors sponsors-block__sponsors--primary"><ul class="sponsors-nav"><li class="sponsors-nav__item"><a class="sponsors-nav__link" href="https://www.nike.com/gb/" target="_blank" rel="noreferrer"><div class="responsive-image responsive-image--transparent"><div class="responsive-image__preload-ref"><img src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/Nike_Swoosh_Black.png" data-src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/Nike_Swoosh_Black.png" class="blur-up image-is-loaded lazyloaded ls-is-cached" alt="Partner Logos 2022/Low Resolution (Small File Size)/Nike_Swoosh_Black"></div></div></a></li><li class="sponsors-nav__item"><a class="sponsors-nav__link" href="http://www.three.co.uk/chelseafc?id=WH_21" target="_blank" rel="noreferrer"><div class="responsive-image responsive-image--transparent"><div class="responsive-image__preload-ref"><img src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/Principal Partners/Three_Black.png" data-src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/Principal Partners/Three_Black.png" class="blur-up image-is-loaded lazyloaded ls-is-cached" alt="Partner Logos 2022/Low Resolution (Small File Size)/Principal Partners/Three_Black"></div></div></a></li><li class="sponsors-nav__item"><a class="sponsors-nav__link" href="https://www.whalefin.com/web/home" target="_blank" rel="noreferrer"><div class="responsive-image responsive-image--transparent"><div class="responsive-image__preload-ref"><img src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/Principal Partners/Whalefin_Colour_Black.png" data-src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/Principal Partners/Whalefin_Colour_Black.png" class="blur-up image-is-loaded lazyloaded ls-is-cached" alt="Partner Logos 2022/Low Resolution (Small File Size)/Principal Partners/Whalefin_Colour_Black"></div></div></a></li><li class="sponsors-nav__item"><a class="sponsors-nav__link" href="https://www.trivago.com/?cip=1010725040101" target="_blank" rel="noreferrer"><div class="responsive-image responsive-image--transparent"><div class="responsive-image__preload-ref"><img src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/Principal Partners/Trivago_Coloured.png" data-src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/Principal Partners/Trivago_Coloured.png" class="blur-up image-is-loaded lazyloaded ls-is-cached" alt="Partner Logos 2022/Low Resolution (Small File Size)/Principal Partners/Trivago_Coloured"></div></div></a></li></ul></div><div class="sponsors-block__sponsors sponsors-block__sponsors--secondary"><ul class="sponsors-nav"><li class="sponsors-nav__item"><a class="sponsors-nav__link" href="https://www.cadbury.co.uk/" target="_blank" rel="noreferrer"><div class="responsive-image responsive-image--transparent"><div class="responsive-image__preload-ref"><img src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/Cadbury.png" data-src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/Cadbury.png" class="blur-up image-is-loaded lazyloaded ls-is-cached" alt="Partner Logos 2022/Low Resolution (Small File Size)/Cadbury"></div></div></a></li><li class="sponsors-nav__item"><a class="sponsors-nav__link" href="https://www.ea.com/en-gb/games/fifa" target="_blank" rel="noreferrer"><div class="responsive-image responsive-image--transparent"><div class="responsive-image__preload-ref"><img src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/EA_Black.png" data-src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/EA_Black.png" class="blur-up image-is-loaded lazyloaded ls-is-cached" alt="Partner Logos 2022/Low Resolution (Small File Size)/EA_Black"></div></div></a></li><li class="sponsors-nav__item"><a class="sponsors-nav__link" href="https://www.gomarkets.com/" target="_blank" rel="noreferrer"><div class="responsive-image responsive-image--transparent"><div class="responsive-image__preload-ref"><img src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/GoMarkets_Black.png" data-src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/GoMarkets_Black.png" class="blur-up image-is-loaded lazyloaded ls-is-cached" alt="Partner Logos 2022/Low Resolution (Small File Size)/GoMarkets_Black"></div></div></a></li><li class="sponsors-nav__item"><a class="sponsors-nav__link" href="https://www.hublot.com/" target="_blank" rel="noreferrer"><div class="responsive-image responsive-image--transparent"><div class="responsive-image__preload-ref"><img src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/Hublot_Black.png" data-src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/Hublot_Black.png" class="blur-up image-is-loaded lazyloaded ls-is-cached" alt="Partner Logos 2022/Low Resolution (Small File Size)/Hublot_Black"></div></div></a></li><li class="sponsors-nav__item"><a class="sponsors-nav__link" href="https://www.msccruises.co.uk/" target="_blank" rel="noreferrer"><div class="responsive-image responsive-image--transparent"><div class="responsive-image__preload-ref"><img src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/MSC_Cruises.png" data-src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/MSC_Cruises.png" class="blur-up image-is-loaded lazyloaded ls-is-cached" alt="Partner Logos 2022/Low Resolution (Small File Size)/MSC_Cruises"></div></div></a></li><li class="sponsors-nav__item"><a class="sponsors-nav__link" href="https://td.prism.bet/6e0da02" target="_blank" rel="noreferrer"><div class="responsive-image responsive-image--transparent"><div class="responsive-image__preload-ref"><img src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/Parimatch.png" data-src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/Parimatch.png" class="blur-up image-is-loaded lazyloaded ls-is-cached" alt="Partner Logos 2022/Low Resolution (Small File Size)/Parimatch"></div></div></a></li><li class="sponsors-nav__item"><a class="sponsors-nav__link" href="https://www.singha.com/" target="_blank" rel="noreferrer"><div class="responsive-image responsive-image--transparent"><div class="responsive-image__preload-ref"><img src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/Singha.png" data-src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/Singha.png" class="blur-up image-is-loaded lazyloaded ls-is-cached" alt="Partner Logos 2022/Low Resolution (Small File Size)/Singha"></div></div></a></li><li class="sponsors-nav__item"><a class="sponsors-nav__link" target="_blank" rel="noreferrer"><div class="responsive-image responsive-image--transparent"><div class="responsive-image__preload-ref"><img src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/Sure.png" data-src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/Sure.png" class="blur-up image-is-loaded lazyloaded ls-is-cached" alt="Partner Logos 2022/Low Resolution (Small File Size)/Sure"></div></div></a></li><li class="sponsors-nav__item"><a class="sponsors-nav__link" href="https://tryzapp.com/?gclid=CjwKCAjwmeiIBhA6EiwA-uaeFfaud5yPPEB_jBpWkwC9qr8ieMPHkRC7NX0tuc6b-dmEHBKSMxxVLRoCg-MQAvD_BwE" target="_blank" rel="noreferrer"><div class="responsive-image responsive-image--transparent"><div class="responsive-image__preload-ref"><img src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/Zapp_Blue.png" data-src="https://img.chelseafc.com//image/upload/f_auto,c_pad,h_68,w_126/Partner Logos 2022/Low Resolution (Small File Size)/Zapp_Blue.png" class="blur-up image-is-loaded lazyloaded ls-is-cached" alt="Partner Logos 2022/Low Resolution (Small File Size)/Zapp_Blue"></div></div></a></li></ul></div></div>
+          
+
+         <!-- chatbox -->
+         
+      <div id="body">
+  
+  
+          <!--button-->
+          <div id="chat-circle" class="btn btn-raised">
+              <div id="chat-overlay"></div>
+              <!--<i class="material-icons">android</i>-->
+              <img class="chat-circle_robot" src="https://cdn.iconscout.com/icon/free/png-256/robot-86-404724.png">
+          </div>
+  
+          <!--chat-bot-->
+          <div class="chat-box">
+              <div class="chat-box-body">
+                  <!--welcome message-->
+                  <div class="chat-box-welcome__header">
+                      <div class="chat-box__header-text">
+                          <p3 class="chat-box-welcome__company-name">ChatBot Chelsea</p3>
+                          <span class="chat-box-toggle"><i class="material-icons">cancel</i></span>
+                      </div>
+  
+                      <div id="chat-box-welcome__ava">
+                          <!--<i class="material-icons">android</i>-->
+                          <img class="chat-box-welcome_robot" src="https://cdn.iconscout.com/icon/free/png-256/robot-86-404724.png">
+                      </div>
+                      <div class="chat-box-welcome__welcome-text">
+                          <p>Chào mừng đến với Chatbox câu lạc bộ Chelsea</p>
+                      </div>
+                      <!--<div id="chat">
+  
+                      </div>-->
+                  </div>
+  
+  
+  
+  
+                  <!--chat-bot after welcome was toggled-->
+                  <div id="chat-box__wraper">
+                      <div class="chat-box-header">
+                          ChatBot Chelsea
+                          <span class="chat-box-toggle"><i class="material-icons">cancel</i></span>
+                      </div>
+  
+  
+  
+                      <div class="chat-box-overlay">
+                      </div>
+                      <div class="chat-logs">
+                          <div id="cm-msg-0" class="chat-msg bot">
+                              <span class="msg-avatar">
+                         <!--<i class="material-icons">android</i>-->
+                         <img class="chat-box-overlay_robot" src="./img/logo chel.png">          
+                         </span>
+                              <div class="cm-msg-text">
+                                  Chào mừng đến với Chatbox câu lạc bộ Chelsea
+                              </div>
+                          </div>
+                          <!--<div class="text-center"><p>loader 1</p><div class="loader1"></div></div>-->
+                          <div class="spin-container">
+                              <div class="spiner">
+                                  <div aria-hidden="true"></div>
+                                  <div aria-hidden="true"></div>
+                                  <div aria-hidden="true"></div>
+                              </div>
+                          </div>
+  
+  
+  
+                      </div>
+                      <!--chat-log-->
+                  </div>
+  
+              </div>
+              <div class="chat-input-box" id="chatLog">
+                  <form class="chat-input__form">
+                     <input type="text" class="chat-input__text" id="chat-input__text" placeholder="Gửi tin nhắn" /> 
+                      <button type="submit" class="chat-submit" id="chat-submit">
+                        <i class="material-icons">send</i>
+                    </button>
+                  </form>
+                  
+              </div>
+          </div>
+      </div>
+      <script>
+          
+      </script>
+      <!-- end live-chat -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!--jquery ui-->
+      <!--<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>-->
+  
+    <script src="app.js"></script> 
+
+
+    
+          <!-- footer -->
+          <!--Important link source from https://bootsnipp.com/snippets/ooa9M-->
+
+	<!-- footer section start -->
+  <!-- <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <a href="./index.html"><img src="./img/logo chell.png" alt="" class="img-fluid logo-footer"></a>
+                    <div class="footer-about">
+                        <p>Câu lạc bộ bóng đá Chelsea là một câu lạc bộ bóng đá chuyên nghiệp của Anh có trụ sở tại Fulham, London. Được thành lập vào năm 1905, câu lạc bộ hiện đang thi đấu tại Premier League, giải đấu hàng đầu của bóng đá Anh  </p>
+                    </div>
+
+        </div>
+      
+                  <div class="col-md-3">
+                      <div class="social-links">
+            <h2>Follow Us</h2>
+            <img src="./assets/images/about/home_line.png" alt="">
+            <div class="social-icons">
+              <li><a href=""><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+              <li><a href=""><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+              <li><a href=""><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
+            </div>
+          </div>
+                  
+
+                  </div>
+        <div class="col-md-3">
+          <div class="address">
+            <h2>Address</h2>
+            <img src="./assets/images/about/home_line.png" alt="" class="img-fluid">
+            <div class="address-links">
+              <li class="address1"><i class="fa-solid fa-location-dot"></i> 
+                Stamford Bridge
+                Fulham Road
+                London
+                SW6 1HS
+              </li>
+                 <li><a href=""><i class="fa-solid fa-phone"></i>  +44 20 7386 9373</a></li>
+                 <li><a href=""><i class="fa-solid fa-envelope"></i> chelsea@gmail.com</a></li>
+            </div>
+            <!-- js back to top -->
+            <!-- <a href="#" class="cd-top text-replace js-cd-top">
+              <div id="back-to-top" class="back-to-top">
+                <button id="button" class="btn btn-dark" title="Back to Top" style="display: block;">
+                    <i class="fa fa-angle-up"></i>
+                </button>
+            </div>
+            </a>
+            <script>
+              var btn = $('#button');
+    
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > 300) {
+        btn.addClass('show');
+      } else {
+        btn.removeClass('show');
+      }
+    });
+    
+    btn.on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop:0}, '300');
+    });
+    
+    
+            </script> -->
+           <!-- end back to top -->
+          <!-- </div>
+        </div>
+                
+      </div>
+    </div>
+
+  </footer>  -->
+  <!-- footer section end -->
+  <!-- footer copy right section start -->
+
+  <!-- footer copy right section end -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Về Chúng Tôi</h4>
+          <ul>
+            <li><a href="#">Mô tả</a></li>
+            <li><a href="#">Liên hệ</a></li>
+           
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hỗ trợ</h4>
+          <ul>
+            <li><a href="#">Email:chelsea@gmail.com</a></li>
+            <li><a href="#">Phone:+44 371 811 1955</a></li>
+            <li><a href="#">Address:London SW6 1HS
+              28036; Fulham,</a></li>
+        
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Cửa hàng</h4>
+          <ul>
+            <li><a href="#">Shirt</a></li>
+            <li><a href="#">Jacket</a></li>
+            <li><a href="#">Phụ Kiện</a></li>
+           
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Theo dõi</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <!-- back to top -->
+          <a href="#" class="cd-top text-replace js-cd-top">
+            <div id="back-to-top" class="back-to-top">
+              <button id="button" class="btn btn-dark" title="Back to Top" style="display: block;">
+                  <i class="fa fa-angle-up"></i>
+              </button>
+          </div>
+          </a>
+          <script>
+            var btn = $('#button');
+  
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+      btn.addClass('show');
+    } else {
+      btn.removeClass('show');
+    }
+  });
+  
+  btn.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
+  });
+  
+  
+          </script>
+        </div>
+      </div>
+    </div>
+ </footer>
+    </header> 
+    <script src="./js/respon.js"></script>
+   
+   
+  
+    
+    
+    
+</body>
+
+
+
+
+</html>
